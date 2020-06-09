@@ -65,7 +65,7 @@ var createArrayWizards = function (countWizards, name, surname, coat, eye) {
       name: getRandomName(name, surname),
       coatColor: getRandomElement(coat),
       eyeColor: getRandomElement(eye)
-    }
+    };
     wizards.push(wizard);
   }
 
