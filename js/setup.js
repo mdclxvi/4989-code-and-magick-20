@@ -48,23 +48,23 @@ var getRandomElement = function (arr) {
   return arr[randomIndex];
 };
 
-var getRandomName = function (name, surname) {
+var getRandomName = function (wizardNames, wizardSurnames) {
 
-  var tempName = getRandomElement(name);
-  var tempSurname = getRandomElement(surname);
+  var tempName = getRandomElement(wizardNames);
+  var tempSurname = getRandomElement(wizardSurnames);
   var wizardName = tempName + ' ' + tempSurname;
   return wizardName;
 
 };
 
-var createArrayWizards = function (countWizards, name, surname, coat, eye) {
+var createArrayWizards = function (countWizard, wizardNames, wizardSurnames, coats, eyes) {
 
   var wizards = [];
-  for (var i = 0; i < countWizards; i++) {
+  for (var i = 0; i < countWizard; i++) {
     var wizard = {
-      name: getRandomName(name, surname),
-      coatColor: getRandomElement(coat),
-      eyeColor: getRandomElement(eye)
+      name: getRandomName(wizardNames, wizardSurnames),
+      coatColor: getRandomElement(coats),
+      eyeColor: getRandomElement(eyes)
     };
     wizards.push(wizard);
   }
